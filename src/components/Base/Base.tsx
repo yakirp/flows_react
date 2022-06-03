@@ -1,11 +1,16 @@
 import React from "react";
+import Dashboard from "../Dashboard";
+import { appProps } from "../objects";
 
-export interface ButtonProps {
-    label: string;
-}
 
-const Base = (props: ButtonProps) => {
-    return <button>{props.label}</button>;
+
+const Base = (props: appProps) => {
+  return (
+    <>
+      <Dashboard apiKey={props.apiKey} projectId={props.projectId} userId={props.userId} userGroupId={props.userGroupId}></Dashboard>
+    </>
+  );
 };
+
 
 export default Base;
