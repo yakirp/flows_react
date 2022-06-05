@@ -2,8 +2,6 @@ import React from "react";
 import Dashboard from "../Dashboard";
 import { appProps } from "../objects";
 
-
-
 const Base = (props: appProps) => {
   return (
     <>
