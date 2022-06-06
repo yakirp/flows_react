@@ -14,13 +14,14 @@ const Dashboard = (properties: appProps) => {
   };
 
   useEffect(() => {
+    setIsDataLoaded(false);
+
     const load = async () => {
       let res = await loadData();
       setData(res);
       setIsDataLoaded(true);
     };
-
-    setIsDataLoaded(false);
+    
     load();
   }, []);
 
